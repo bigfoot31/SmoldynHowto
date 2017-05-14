@@ -1,0 +1,195 @@
+dim 3
+
+accuracy 1
+boxsize 1
+
+boundaries x 0 30 r
+boundaries y 0 10 r
+boundaries z 0 10 r
+
+species A B AB pB X pC pBX C pBC pCY Y D E pCD pD Z pE pDZ pDE pEW W F pEF pF V pFV G pFG pG U pGU
+
+molecule_lists A_list B_list AB_list pB_list X_list pC_list pBX_list C_list pBC_list pCY_list Y_list D_list E_list pCD_list pD_list Z_list 
+molecule_lists pE_list pDZ_list pDE_list pEW_list W_list F_list pEF_list pF_list V_list pFV_list G_list pFG_list pG_list U_list pGU_list
+mol_list A A_list
+mol_list B B_list
+mol_list AB AB_list
+mol_list pB pB_list
+mol_list X X_list
+mol_list pC pC_list
+mol_list pBX pBX_list
+mol_list C C_list
+mol_list pBC pBC_list
+mol_list pCY pCY_list
+mol_list Y Y_list
+mol_list D D_list
+mol_list E E_list
+mol_list pCD pCD_list
+mol_list pD pD_list
+mol_list Z Z_list
+mol_list pE pE_list
+mol_list pDZ pDZ_list
+mol_list pDE pDE_list
+mol_list pEW pEW_list
+mol_list W W_list
+mol_list F F_list
+mol_list pEF pEF_list
+mol_list pF pF_list
+mol_list V V_list
+mol_list pFV pFV_list
+mol_list G G_list
+mol_list pFG pFG_list
+mol_list pG pG_list
+mol_list U U_list
+mol_list pGU pGU_list       
+
+
+color A red
+color B yellow
+color AB black
+color pB black
+color X green
+color pC black
+color pBX black
+color C blue
+color pBC black
+color pCY black
+color Y violet
+color D violet
+color E violet
+color pCD violet
+color pD violet
+color Z violet
+color pE violet
+color pDZ violet
+color pDE violet
+color pEW violet
+color W violet
+color F violet
+color pEF violet
+color pF violet
+color V violet
+color pFV violet
+color G violet
+color pFG violet
+color pG violet
+color U violet
+color pGU violet       
+
+
+difc A 0
+difc B 10
+difc AB 0
+difc pB 10
+difc X 10
+difc pC 10
+difc pBX 10
+difc C 10
+difc pBC 10
+difc pCY 10
+difc Y 10
+difc D 10
+difc E 10
+difc pCD 10
+difc pD 10
+difc Z 10
+difc pE 10
+difc pDZ 10
+difc pDE 10
+difc pEW 10
+difc W 10
+difc F 10
+difc pEF 10
+difc pF 10
+difc V 10
+difc pFV 10
+difc G 10
+difc pFG 10
+difc pG 10
+difc U 10
+difc pGU 10       
+
+
+time_start 0
+time_stop 1200
+time_step 0.01
+
+mol 5000 A 0 u u
+mol 50000 B u u u
+mol 0 AB u u u
+mol 0 pB u u u
+mol 25000 X u u u
+mol 0 pC u u u
+mol 0 pBX u u u
+mol 50000 C u u u
+mol 0 pBC u u u
+mol 0 pCY u u u
+mol 25000 Y u u u
+mol 50000 D u u u
+mol 0 pD u u u
+mol 25000 Z u u u
+mol 0 pE u u u
+mol 0 pDZ u u u
+mol 50000 E u u u
+mol 0 pEW u u u
+mol 25000 W u u u
+mol 0 pCD u u u
+mol 0 pDE u u u
+mol 50000 F u u u 
+mol 0 pEF u u u 
+mol 0 pF u u u 
+mol 25000 V u u u 
+mol 0 pFV u u u 
+mol 50000 G u u u 
+mol 0 pFG u u u 
+mol 0 pG u u u 
+mol 25000 U u u u 
+mol 0 pGU u u u 
+
+
+reaction R1 A + B -> AB 0.0289
+reaction R2 AB -> A + B  0.225
+reaction R3 AB -> A + pB 0.025
+reaction R4 pB + X -> pBX 0.0289
+reaction R5 pBX -> pB + X 0.225
+reaction R6 pBX -> B + X 0.025
+reaction R7 pB + C -> pBC 0.0289
+reaction R8 pBC -> pB + C 0.225
+reaction R9 pBC -> pB + pC 0.025
+reaction R10 pC + Y -> pCY 0.0289
+reaction R11 pCY -> pC + Y 0.225
+reaction R12 pCY -> C + Y 0.025
+reaction R13 pC + D -> pCD 0.0289
+reaction R14 pCD -> pC + D  0.225
+reaction R15 pCD -> pC + pD 0.025
+reaction R16 pD + Z -> pDZ 0.0289
+reaction R17 pDZ -> pD + Z 0.225
+reaction R18 pDZ -> D + Z 0.025
+reaction R19 pD + E -> pDE 0.0289
+reaction R20 pDE -> pD + E 0.225
+reaction R21 pDE -> pD + pE 0.025
+reaction R22 pE + W -> pEW 0.0289
+reaction R23 pEW -> pE + W 0.225
+reaction R24 pEW -> E + W 0.025
+reaction R25 pE + F -> pEF 0.0289
+reaction R26 pEF -> pE + F 0.225
+reaction R27 pEF -> pE + pF 0.025
+reaction R28 pF + V -> pFV 0.0289
+reaction R29 pFV -> pF + V 0.225
+reaction R30 pFV -> F + V 0.025
+reaction R31 pF + G -> pFG 0.0289
+reaction R32 pFG -> pF + G 0.225
+reaction R33 pFG -> pF + pG 0.025
+reaction R34 pG + U -> pGU 0.0289
+reaction R35 pGU -> pG + U 0.225
+reaction R36 pGU -> G + U 0.025
+
+
+output_files OUTFILE
+output_files OUTFILE1
+output_files OUTFILE2
+cmd e molcountspace pC 0 0 30 30 0 10 0 10 0 OUTFILE
+cmd e molcountspace pE 0 0 30 30 0 10 0 10 0 OUTFILE1
+cmd e molcountspace pG 0 0 30 30 0 10 0 10 0 OUTFILE2
+
+end_file
