@@ -1,0 +1,81 @@
+dim 3
+
+accuracy 1
+boxsize 1
+
+boundaries x 0 30 r
+boundaries y 0 10 r
+boundaries z 0 10 r
+
+species A B AB pB X pC pBX C pBC pCY Y
+molecule_lists A_list B_list AB_list pB_list X_list pC_list pBX_list C_list pBC_list pCY_list Y_list
+mol_list A A_list
+mol_list B B_list
+mol_list AB AB_list
+mol_list pB pB_list
+mol_list X X_list
+mol_list pC pC_list
+mol_list pBX pBX_list
+mol_list C C_list
+mol_list pBC pBC_list
+mol_list pCY pCY_list
+mol_list Y Y_list
+
+color A red
+color B yellow
+color AB black
+color pB black
+color X green
+color pC black
+color pBX black
+color C blue
+color pBC black
+color pCY black
+color Y violet
+
+difc A 0
+difc B 10
+difc AB 0
+difc pB 10
+difc X 10
+difc pC 10
+difc pBX 10
+difc C 10
+difc pBC 10
+difc pCY 10
+difc Y 10
+
+time_start 0
+time_stop 1200
+time_step 0.01
+
+mol 5000 A 0 u u
+mol 50000 B u u u
+mol 0 AB u u u
+mol 0 pB u u u
+mol 25000 X u u u
+mol 0 pC u u u
+mol 0 pBX u u u
+mol 50000 C u u u
+mol 0 pBC u u u
+mol 0 pCY u u u
+mol 25000 Y u u u
+
+
+reaction R1 A + B -> AB 0.0289
+reaction R2 AB -> A + B  0.225
+reaction R3 AB -> A + pB 0.025
+reaction R4 pB + X -> pBX 0.0289
+reaction R5 pBX -> pB + X 0.225
+reaction R6 pBX -> B + X 0.025
+reaction R7 pB + C -> pBC 0.0289
+reaction R8 pBC -> pB + C 0.225
+reaction R9 pBC -> pB + pC 0.025
+reaction R10 pC + Y -> pCY 0.0289
+reaction R11 pCY -> pC + Y 0.225
+reaction R12 pCY -> C + Y 0.025
+
+output_files OUTFILE
+cmd e molcountspace pC 0 0 30 30 0 10 0 10 0 OUTFILE
+
+end_file
